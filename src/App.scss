@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "MPlusRounded";
+  src: url("../src/fonts/MPLUSRounded1c-Medium.ttf");
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;    
+    justify-content: $justify;
+    align-items: $align;    
+}
+
+$orange: #f28f50;
+$darkGrey: #292929;
+$grey: #494949;
+$white: #ffffff;
+$blue: #c3ecf2;
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MPlusRounded", Calibri;
+}
+
+html {
+  font-size: 62.5%;  
+  scroll-behavior: smooth;
+  background-color: $darkGrey;
+}
+
+
