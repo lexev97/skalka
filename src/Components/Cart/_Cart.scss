@@ -1,0 +1,113 @@
+@use "../../App.scss" as *;
+
+.cart-list {
+  border-bottom: 0.3rem solid $grey;
+  width: 55vw;
+  padding: 1rem 0 2rem 0;
+
+  li {
+    font-family: "MPlusRounded-r", "Calibri";
+    background: $grey;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+}
+
+.cart-is-empty {
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  background-color: $grey;
+  font-family: "MPlusRounded-r", "Calibri";
+  padding: 5rem;
+  text-align: center;
+  color: $white;
+  width: 55vw;
+}
+
+.cart-header {
+  font-family: "MPlusRounded-r";
+  color: $white;
+  background-color: $orange;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 55vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.order-prcd {
+  padding: 2rem 0;
+  text-align: center;
+  &__btn {
+    cursor: pointer;
+    font-family: "MPlusRounded-M", "Calibri";
+    border-radius: 1rem;
+    background-color: $blue;
+    border: none;
+    padding: 0.3rem 2rem;
+    color: $darkgrey;
+    box-shadow: 0 0.4rem 0.4rem rgba(0,0,0, 0.25)
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .cart-header {
+    width: 90vw;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .cart-is-empty {
+    width: 90vw;
+  }
+
+  .cart-list {
+    width: 90vw;
+    li {
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+  }
+
+  .order-prcd {
+    &__btn {
+      width: 75vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .cart-header {
+    width: 80vw;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .cart-is-empty {
+    width: 80vw;
+  }
+
+  .cart-list {
+    width: 80vw;
+    li {
+      gap: 2rem;
+    }
+    
+  }
+
+  .order-prcd {
+    &__btn {
+      width: auto;
+    }
+  }
+}

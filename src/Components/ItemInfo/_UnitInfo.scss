@@ -1,0 +1,90 @@
+@use "../../App.scss" as *;
+
+.unit-info-header {
+  font-family: "MPlusRounded-r", "Calibri";
+  color: $white;
+  background-color: $orange;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 65vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.unit-info {
+  background: $grey;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  width: 65vw;
+  display: flex;
+  gap: 2rem;
+  min-height: 70vh;
+
+  &__img {
+    flex: 1 1 50%;
+    border: 0.5rem solid rgba(242, 143, 80, 0.7);
+    border-radius: 1.5rem;
+    background-color: $darkgrey;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__txt {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "MPlusRounded-r", "Calibri";
+    gap: 2rem;
+    ul {
+      list-style: none;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__add {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    color: $blue;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .unit-info-header {
+    h1 {
+      font-size: 2.5rem;
+    }
+    width: 90vw;
+  }
+
+  .unit-info {
+    width: 90vw;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .unit-info-header {
+    h1 {
+      font-size: 2.5rem;
+    }
+    width: 80vw;
+  }
+
+  .unit-info {
+    width: 80vw;
+    flex-wrap: wrap;
+  }
+}

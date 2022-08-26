@@ -1,0 +1,147 @@
+@use "../../App.scss" as *;
+
+footer {
+  position: relative;
+  z-index: 0;
+}
+
+.footer {
+  background-color: $darkgrey;
+  color: $orange;
+  font-family: "MPlusRounded-L", "Calibri";
+  h3 {
+    color: $blue;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10rem;
+
+  span {
+    font-family: "MPlusRounded-M", "Calibri";
+  }
+
+  header {
+    padding-bottom: 2rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+.footer-links {
+  flex: 1 1 28rem;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 6rem 0 0;
+
+  button {
+    cursor: pointer;
+    font-family: "MPlusRounded-L", "Calibri";
+    color: $orange;
+    background: none;
+    border: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $white;
+      transition: all 0.2s ease;
+    }
+
+    &:active {
+      color: $orange;
+    }
+  }
+}
+
+.footer-makeorder {
+  flex: 1 1 28rem;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 6rem 0 0;
+}
+
+.footer-bebetter {
+  flex: 1 1 28rem;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 6rem 0 0;
+}
+
+.footer-social {
+  flex: 1 1 28rem;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 6rem 0 0;
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    svg,
+    #vk-icon,
+    #tm-icon,
+    #ig-icon,
+    #wp-icon,
+    #yt-icon {
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        #vk-icon,
+        #tm-icon,
+        #ig-icon,
+        #wp-icon,
+        #yt-icon {
+          fill: $white;
+          transition: all 0.2s ease;
+        }
+      }
+
+      &:active {
+        #vk-icon,
+        #tm-icon,
+        #ig-icon,
+        #wp-icon,
+        #yt-icon {
+          fill: $orange;
+        }
+      }
+    }
+  }
+}
+
+.new-user-modal-content_footer {
+  background-color: $grey;
+  width: 50vw;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 1rem;
+
+  font-family: "MPlusRounded-r", "Calibri";
+  color: $white;
+  text-align: start;
+
+  li {
+    font-family: "MPlusRounded-r", "Calibri";
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .new-user-modal-content_footer {
+  width: 90vw;
+}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .new-user-modal-content_footer {
+  width: 70vw;
+}
+}

@@ -1,17 +1,25 @@
 @font-face {
-  font-family: "MPlusRounded";
+  font-family: "MPlusRounded-M";
   src: url("../src/fonts/MPLUSRounded1c-Medium.ttf");
+}
+@font-face {
+  font-family: "MPlusRounded-R";
+  src: url("../src/fonts/MPLUSRounded1c-Regular.ttf");
+}
+@font-face {
+  font-family: "MPlusRounded-L";
+  src: url("../src/fonts/MPLUSRounded1c-Light.ttf");
 }
 
 @mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;    
-    justify-content: $justify;
-    align-items: $align;    
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 $orange: #f28f50;
-$darkGrey: #292929;
+$darkgrey: #292929;
 $grey: #494949;
 $white: #ffffff;
 $blue: #c3ecf2;
@@ -33,13 +41,19 @@ p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "MPlusRounded", Calibri;
 }
 
 html {
-  font-size: 62.5%;  
+  font-size: 62.5%;
   scroll-behavior: smooth;
-  background-color: $darkGrey;
+  background-color: $darkgrey;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
+body {
+    overflow-x: hidden;
+}
 
+.lock {
+  overflow: hidden;  
+}

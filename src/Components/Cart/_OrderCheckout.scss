@@ -1,0 +1,128 @@
+@use "../../App.scss" as *;
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+  color: $white;
+  padding: 0 1rem;
+  gap: 1rem;
+
+  &__name-bloc {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__city-bloc {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__house-bloc {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__comments-bloc {
+    display: block;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+  }
+
+  &__field {
+    flex-grow: 1;
+    padding: 0.5rem;
+  }
+
+  & label {
+    font-family: "MPlusRounded-r", "Calibri";
+    font-size: 1.3rem;
+    display: block;
+    text-align: left;
+    padding-bottom: 0.5rem;
+  }
+
+  & input,
+  textarea {
+    font-family: "MPlusRounded-r", "Calibri";
+    font-size: 1.7rem;
+    resize: none;
+    border-radius: 1rem;
+    padding: 1rem 1rem 0.3rem 1rem;
+    border: none;
+    border-bottom: 0.3rem solid $orange;
+    color: $blue;
+    display: block;
+    width: 100%;
+    background-color: $grey;
+  }
+
+  &__control-bloc {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+}
+
+.order-cancel-btn {
+  cursor: pointer;
+  font-family: "MPlusRounded-M", "Calibri";
+  border-radius: 1rem;
+  background-color: $orange;
+  border: none;
+  padding: 0.3rem 2rem;
+  color: $darkgrey;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+::placeholder {
+  font-family: "MPlusRounded-r", "Calibri";
+  color: grey;
+  font-size: 1.6rem;
+}
+
+.invalid input {
+  border-bottom: 0.3rem solid red;
+}
+
+.invalid {
+  label {
+    color: $white;
+  }
+  p {
+    color: lightcoral;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .order-form {
+    width: 90vw;
+
+    &__name-bloc,
+    &__city-bloc {
+      flex-direction: column;
+    }
+    &__house-bloc {
+      flex-wrap: wrap;
+    }
+  }
+
+  ::placeholder {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+
+  .order-form {
+    width: 80vw;
+
+    &__name-bloc,
+    &__city-bloc {
+      flex-direction: column;
+    }
+  }
+
+  ::placeholder {
+    font-size: 1.3rem;
+  }
+}

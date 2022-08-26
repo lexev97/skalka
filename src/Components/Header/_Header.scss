@@ -1,43 +1,19 @@
 @use "../../App.scss" as *;
 
 .main-header {
+  background-color: $darkgrey;
   box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
+  font-family: "MPlusRounded-M";
+  z-index: 10;
 }
 
 .main-header-wrapper {
-  width: 90vw;
+  width: 90%;
   margin: auto;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
   display: flex;
-  flex-wrap: wrap;
-}
-
-.user {
-  color: $orange;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 1 1 20rem;
-
-  span {
-    height: 2.2rem;
-    width: 0.2rem;
-    background-color: $orange;
-    margin: 0 1rem;
-    border-radius: 2px;
-  }
-
-  &__login {  
-  }
-
-  &__reg {
-    h2 {
-      font-weight: normal;
-    }
-  }
 }
 
 .logo-area {
@@ -66,11 +42,68 @@
   }
 }
 
-.cart {
+.cart-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   flex: 1 1 20rem;
+}
+
+.cart-btn {
+  cursor: pointer;
   color: $white;
+  font-family: "MPlusRounded-L", "Calibri";
+  border-radius: 1rem;
+  background-color: $orange;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 2rem;
+
+  &:hover {
+    background-color: #c5672b;
+    transition: background-color 0.3s ease;
+  }
+  &:active {
+    background-color: $orange;
+    transition: background-color 0.1s ease;
+  }
+
+  &__icon {
+    margin-right: 2rem;
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .logo-area {
+    &__tel,
+    &__city {
+      display: none;
+      order: 2;
+    }
+    text-align: left;
+    flex: 1 1 10rem;
+  }
+
+  .cart-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+   flex: 1 1 10rem;
+}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+   .logo-area {
+    &__tel,
+    &__city {
+      display: none;
+    }
+  }
+  
 }

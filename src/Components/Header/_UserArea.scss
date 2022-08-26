@@ -1,0 +1,248 @@
+@use "../../App.scss" as *;
+
+.user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 1 20rem;
+
+  button {
+    color: $orange;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $white;
+      transition: all 0.2s ease;
+    }
+
+    &:active {
+      color: $orange;
+    }
+  }
+
+  &__login {
+    button {
+      font-family: "MPlusRounded-M", "Calibri";
+    }
+  }
+
+  &__span {
+    height: 2.2rem;
+    width: 0.2rem;
+    background-color: $orange;
+    margin: 0 1rem;
+    border-radius: 2px;
+  }
+
+  &__reg {
+    button {
+      font-family: "MPlusRounded-l", "Calibri";
+    }
+  }
+}
+
+.new-user-modal-header {
+  font-family: "MPlusRounded-r", "Calibri";
+  color: $white;
+  background-color: $orange;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-user-modal-content {
+  width: 50vw;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "MPlusRounded-r", "Calibri";
+  color: $white;
+  text-align: center;
+
+  &_message {
+    background-color: $grey;
+  }
+
+  form {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-family: "MPlusRounded-r", "Calibri";
+      font-size: 1.3rem;
+      display: block;
+      text-align: left;
+      padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    input {
+      font-family: "MPlusRounded-r", "Calibri";
+      font-size: 1.7rem;
+      resize: none;
+      border-radius: 1rem;
+      padding: 1rem 1rem 0.3rem 1rem;
+      border: none;
+      border-bottom: 0.3rem solid $orange;
+      color: $blue;
+      display: block;
+      width: 35vw;
+      background-color: $grey;
+    }
+
+    button {
+      margin-top: 3rem;
+      align-self: center;
+      cursor: pointer;
+      font-family: "MPlusRounded-M", "Calibri";
+      border-radius: 1rem;
+      background-color: $blue;
+      border: none;
+      padding: 0.3rem 2rem;
+      color: $darkgrey;
+      width: 25vw;
+      box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.orders-list {
+  border-bottom: 0.3rem solid $grey;
+  width: 50vw;
+  padding: 0.5rem 0 3rem 0;
+
+  li {
+    font-family: "MPlusRounded-l", "Calibri";
+    font-size: medium;
+    text-align: start;
+    background: $grey;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+}
+
+::placeholder {
+  font-family: "MPlusRounded-r", "Calibri";
+  color: grey;
+  font-size: 1.6rem;
+}
+
+.invalid {
+  color: lightcoral;
+  text-align: left;
+  padding: 0.2rem 0.5rem 0 0.5rem;
+}
+
+.logoutBtn {
+  margin-top: 3rem;
+  align-self: center;
+  cursor: pointer;
+  font-family: "MPlusRounded-M", "Calibri";
+  border-radius: 1rem;
+  background-color: $blue;
+  border: none;
+  padding: 0.3rem 2rem;
+  color: $darkgrey;
+  width: 25vw;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 768px) {
+  .user {
+    height: 4rem;
+    display: flex;
+    position: fixed;
+    bottom: 1rem;
+    left: 3rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex: none;
+
+    button {
+      color: $grey;
+
+      &:hover {
+        color: $grey;
+        transition: none;
+      }
+
+      &:active {
+        color: $grey;
+      }
+    }
+
+    &__span {
+      background-color: $grey;
+    }
+  }
+
+  .new-user-modal-header {
+    width: 90vw;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .new-user-modal-content {
+    width: 90vw;
+
+    form {
+      input {
+        width: 85vw;
+      }
+      button {
+        width: auto;
+      }
+    }
+  }
+  .orders-list {
+    width: 100%;
+  }
+  .logoutBtn {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .user__login {
+    flex-shrink: 0;
+  }
+  
+  .new-user-modal-header {
+    width: 70vw;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .new-user-modal-content {
+    width: 70vw;
+
+    form {
+      input {
+        width: 45vw;
+      }
+      button {
+        width: auto;
+      }
+    }
+  }
+  .orders-list {
+    width: 100%;
+  }
+  .logoutBtn {
+    width: auto;
+  }
+}

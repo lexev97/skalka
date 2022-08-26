@@ -1,0 +1,298 @@
+@use "../../../App.scss" as *;
+
+.meals-nav {
+  position: relative;
+  color: $grey;
+  z-index: 2;
+
+  &__main-links {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $orange;
+    border-radius: 1.5rem;
+    padding: 0.5rem 2rem;
+    z-index: 2;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding-right: 1.5rem;
+    }
+  }
+
+  &__sub-config {
+    cursor: pointer;
+    color: $grey;
+    font-family: "MPlusRounded-M";
+    transition: color 0.2s ease;
+
+    input {
+      display: none;
+    }
+    input:checked + h1 {
+      color: $white;
+      transition: color 0.2s ease;
+    }
+
+    &:hover {
+      color: $darkgrey;
+      transition: color 0.2s ease;
+    }
+  }
+}
+
+.nav-switch {
+  position: relative;
+  display: inline-block;
+  margin-left: 1.5rem;
+  width: 4rem;
+  height: 2rem;
+
+  input {
+    display: none;
+  }
+
+  &__slider-round {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $darkgrey;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+  }
+
+  &__slider-round::before {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    height: 1.4rem;
+    width: 1.4rem;
+    left: 0.3rem;
+    bottom: 0.3rem;
+    background-color: $grey;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  input:checked + &__slider-round {
+    background-color: $white;
+  }
+
+  input:checked + &__slider-round::before {
+    -webkit-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    transform: translateX(2rem);
+  }
+}
+
+.sub-nav {
+  position: relative;
+  z-index: 1;
+  top: -4.7rem;
+  height: 0;
+  position: relative;
+  margin-bottom: 2rem;
+  transition: all 0.2s ease;
+
+  &_show-sub-menu {
+    top: -1.2rem;
+    height: 3.2rem;
+    transition: all 0.2s ease;
+  }
+
+  &__links {
+    height: 4.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $grey;
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 1.6rem 2rem 0.4rem 2rem;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding-right: 1.5rem;
+
+      label {
+        cursor: pointer;
+        color: $blue;
+        font-family: "MPlusRounded-l";
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $white;
+          transition: color 0.2s ease;
+        }
+      }
+
+      input {
+        display: none;
+      }
+
+      input:checked + h3 {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.mobi-filters-ico {
+  display: none;
+}
+
+.filt-ico-pressed {
+  #mobiFiltersIco {
+    fill: $white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .meals-nav {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 6rem;
+    background-color: $orange;
+    box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.25);
+
+    &__main-links {
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-radius: 0;
+      bottom: 6rem;
+      right: -100%;
+      z-index: 2;
+      border-bottom: 0.5rem solid $grey;
+      transition: all 0.2s ease;
+
+      &_show-mobi-nav {
+        right: 0%;
+        transition: all 0.2s ease;
+      }
+    }
+
+    &__sub-config {
+      &:hover {
+        color: $grey;
+      }
+    }
+
+    li {
+      align-items: center;
+      padding: 0 2rem;
+      justify-content: space-between;
+    }
+  }
+
+  .mobi-filters-ico {
+    display: block;
+    position: fixed;
+    height: 4rem;
+    bottom: 1rem;
+    right: 3rem;
+    z-index: 2;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  .sub-nav {
+    display: flex;
+    position: absolute;
+    background-color: $grey;
+    width: 100%;
+    height: 100%;
+    top: -26.5rem;
+    right: -100%;
+    z-index: 1;
+    margin-bottom: 0;
+    align-items: center;
+
+    &_show-sub-menu {
+      top: -26.5rem;
+      right: 0;
+      height: 100%;
+    }
+
+    &__links {
+      height: 8.5rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: $grey;
+      border-radius: 0;
+      padding: 1rem 2rem;
+
+      li {
+        padding: 0 2rem 0.5rem 2rem;
+        label {
+          cursor: pointer;
+          color: $blue;
+          font-family: "MPlusRounded-l";
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $blue;
+            transition: color 0.2s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .meals-nav__main-links {
+    height: 100%;
+    li {
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .sub-nav {
+    position: relative;
+    z-index: 1;
+    top: -3.4rem;
+    height: 0;
+
+
+    &_show-sub-menu {
+      top: -1rem;
+      height: 3.2rem;
+    }
+
+    &__links {
+      height: 3.4rem;
+      padding: 1rem 2rem 0.2rem 2rem;
+
+      li {
+        label {
+          h3 {font-size: small;}
+          &:hover {
+            color: $blue;
+          }
+        }       
+      }
+    }
+  }
+
+}

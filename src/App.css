@@ -1,6 +1,16 @@
 @font-face {
-  font-family: "MPlusRounded";
+  font-family: "MPlusRounded-M";
   src: url("../src/fonts/MPLUSRounded1c-Medium.ttf");
+}
+
+@font-face {
+  font-family: "MPlusRounded-R";
+  src: url("../src/fonts/MPLUSRounded1c-Regular.ttf");
+}
+
+@font-face {
+  font-family: "MPlusRounded-L";
+  src: url("../src/fonts/MPLUSRounded1c-Light.ttf");
 }
 
 h1 {
@@ -24,12 +34,20 @@ p {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "MPlusRounded", Calibri;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   background-color: #292929;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.lock {
+  overflow: hidden;
 }
 /*# sourceMappingURL=App.css.map */

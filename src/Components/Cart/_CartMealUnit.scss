@@ -1,0 +1,57 @@
+@use "../../App.scss" as *;
+
+.cart-meal-item {
+  display: flex;
+  color: $white;
+
+  &__img {
+    cursor: pointer;
+    border: 0.5rem solid rgba(242, 143, 80, 0.7);
+    border-radius: 1.5rem;
+    background-color: $darkgrey;
+    overflow: hidden;
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__txt {
+    padding: 1rem 1rem;
+    p {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.cart-item-amount {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 5rem;
+  padding-right: 1rem;
+  color: $blue;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-meal-item {
+    align-items: center;
+    &__img {
+      flex-shrink: 0;
+    }
+  }
+
+  .cart-item-amount {
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: 60rem;
+    flex-shrink: 1;
+  }
+}
+

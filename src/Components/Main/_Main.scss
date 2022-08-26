@@ -1,0 +1,59 @@
+@use "../../App.scss" as *;
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.meals {
+  background-image: url("../../assets/patternBg.png");
+  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);
+  padding: 3rem 0;
+  font-family: "MPlusRounded-M";
+}
+
+.meals-wrapper {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: $darkgrey;
+  padding: 2rem;
+}
+
+
+.meals-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 2rem;
+
+  &__loading {
+    text-align: center;
+    color: $white;
+  }
+
+  &__error {
+    text-align: center;
+    color: $orange;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .meals-wrapper {
+    width:95%;
+  }
+
+  .meals-layout {
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .meals-wrapper {
+    width: 90%;
+  }
+}
+

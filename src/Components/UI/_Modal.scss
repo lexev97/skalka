@@ -1,0 +1,76 @@
+@use "../../App.scss" as *;
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  padding-bottom: 15vh;
+  animation: opacity-on 300ms ease-out forwards;
+
+  &_closing {
+    animation: opacity-off 300ms ease-out forwards;
+  }
+  }
+
+.modal {
+  position: relative;
+  // max-width: 70%;
+  top: 5vh;
+  background-color: $darkgrey;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+
+  &_closing {
+    animation: slide-up 300ms ease-out forwards;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+}
+
+@keyframes opacity-on {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes opacity-off {
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
