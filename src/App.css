@@ -2,17 +2,14 @@
   font-family: "MPlusRounded-M";
   src: url("../src/fonts/MPLUSRounded1c-Medium.ttf");
 }
-
 @font-face {
   font-family: "MPlusRounded-R";
   src: url("../src/fonts/MPLUSRounded1c-Regular.ttf");
 }
-
 @font-face {
   font-family: "MPlusRounded-L";
   src: url("../src/fonts/MPLUSRounded1c-Light.ttf");
 }
-
 h1 {
   font-size: 3rem;
 }
@@ -32,8 +29,7 @@ p {
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -49,5 +45,4 @@ body {
 
 .lock {
   overflow: hidden;
-}
-/*# sourceMappingURL=App.css.map */
+}/*# sourceMappingURL=App.css.map */
