@@ -1,14 +1,14 @@
 @font-face {
   font-family: "MPlusRounded-M";
-  src: url("../src/fonts/MPLUSRounded1c-Medium.ttf");
+  src: url("../src/fonts/MPLUSRounded1c-Medium.woff2");
 }
 @font-face {
   font-family: "MPlusRounded-R";
-  src: url("../src/fonts/MPLUSRounded1c-Regular.ttf");
+  src: url("../src/fonts/MPLUSRounded1c-Regular.woff2");
 }
 @font-face {
   font-family: "MPlusRounded-L";
-  src: url("../src/fonts/MPLUSRounded1c-Light.ttf");
+  src: url("../src/fonts/MPLUSRounded1c-Light.woff2");
 }
 
 @mixin flex($direction, $justify, $align) {
