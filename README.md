@@ -14,7 +14,7 @@ Web приложение на базе ReactJS для сервиса по дос
 
 ## Стек
 
-JavaScript, ReactJS, HTML5, CSS3, Flex, Grid Layout, адаптивная верстка.<br>
+JavaScript, ReactJS, HTML5, CSS3, Flex, Grid Layout.<br>
 Серверная сторона реализована с помощью Google Firebase.
 
 ## Инструкция по развертыванию
